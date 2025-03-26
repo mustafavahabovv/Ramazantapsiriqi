@@ -1,0 +1,1017 @@
+/* General Settings */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #fff;
+}
+
+/* Üst Navbar (Sabit) */
+.top-navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #fff;
+    padding: 10px 20px;
+    border-bottom: 1px solid #ddd;
+    z-index: 10;
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.top-navbar .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding-left: 145px;
+    margin-top: 8px;
+    height: 100%;
+}
+
+.logo img {
+    height: 40px;
+    width: auto;
+    object-fit: contain;
+}
+
+.search-bar input {
+    padding: 8px;
+    width: 300px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+/* Aşağı Navbar (Statik) */
+.bottom-navbar {
+    background-color: #f8f8f8f5;
+    padding: 10px 20px;
+    border-bottom: 1px solid #ddd;
+    margin-top: 80px;
+    height: 45px;
+    text-decoration: none;
+}
+
+.bottom-navbar .container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    text-decoration: none;
+}
+
+.bottom-navbar a {
+    text-decoration: none;
+    color: #555;
+    font-size: 14px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.navbarphoto img {
+    width: 30px;
+    height: 30px;
+    object-fit: cover;
+}
+
+.bottom-navbar a {
+    position: relative;
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.3s ease;
+}
+
+.bottom-navbar a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -3px;
+    width: 100%;
+    height: 3px;
+    background-color: purple;
+    transform: scaleX(0);
+    transform-origin: center;
+    transition: transform 0.3s ease;
+    text-decoration: none;
+}
+
+.bottom-navbar a:hover::after {
+    transform: scaleX(1);
+}
+
+.nav-link:hover {
+    text-decoration: none !important;
+}
+
+/* Big Card */
+.big-card {
+    position: relative;
+    margin: 20px;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.big-card img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+
+.card-content {
+    position: absolute;
+    top: 20%;
+    left: 10%;
+    color: #fff;
+}
+
+.card-content .date {
+    background-color: #000;
+    padding: 4px 8px;
+    font-size: 14px;
+    display: inline-block;
+    margin-bottom: 10px;
+}
+
+.card-content h2 {
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+.card-content span {
+    font-weight: bold;
+}
+
+.btn {
+    background-color: #ff3f6c;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+.btn:hover {
+    background-color: #e6325c;
+}
+
+/* Logo və Search Button Eyni Xətdə */
+.left-section {
+    margin-top: auto;
+    margin-bottom: 30px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo img {
+    height: 40px;
+    width: auto;
+    object-fit: contain;
+}
+
+.search-bar input {
+    padding: 8px 8px 8px 40px;
+    width: 701px;
+    height: 48px;
+    border: 1px solid #621add;
+    border-radius: 40px;
+    padding-left: 52px;
+    
+}
+
+
+.search-bar {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.search-btn {
+    position: absolute;
+    left: 10px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: bold;
+    font-size: 18px;
+    padding: 13px;
+    color: #621add;
+}
+
+.search-btn:hover {
+    color:#ff3f6c;
+}
+
+
+.right-section {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 50px;
+}
+
+.delivery-text {
+    display: flex;
+    flex-direction: column;
+}
+
+.delivery-text span {
+    margin: 0;
+    font-size: 14px;
+}
+
+.delivery-text a {
+    margin: 0;
+    font-size: 14px;
+    color: #6a33cc;
+}
+
+.delivery, .cart, .account {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    color: #555;
+    font-size: 14px;  
+}
+
+.delivery i, .cart i {
+    font-size: 16px;
+    color: #555;
+    color: #6a33cc;
+}
+
+.delivery {
+    padding-right: 15px;
+    border-right: none;
+    border-right: 1px solid #ccc;
+    display: flex;
+    gap: 10px;
+    color: #6a33cc;
+
+}
+
+.account {
+    padding-right: 15px;
+    border-right: none;
+    display: flex;
+    gap: 10px;
+    color: #6a33cc;
+}
+
+.account-text {
+    display: flex;
+    flex-direction: column;
+}
+
+.account-text span {
+    margin: 0;
+    font-size: 14px;
+    
+}
+
+.account-text a {
+    margin: 0;
+    font-size: 14px;
+    color: #6a33cc;
+}
+
+
+a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.carousel {
+    position: relative;
+    max-width: 80%;
+    margin: auto;
+    overflow: hidden;
+    margin-top: 18px;
+    border-radius: 10px;
+}
+
+.carousel-inner {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.carousel-item {
+    min-width: 100%;
+    box-sizing: border-box;
+    position: relative;
+}
+
+.coupon {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    padding: 5px 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.carousel-item img {
+    width: 100%;
+    display: block;
+    height: auto;
+    object-fit: cover;
+}
+
+.carousel-control {
+    background-color: #fff;
+    position: absolute;
+    font-size: 17px;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #fff;
+    color: #333333;
+    border-radius: 50%;
+    border-radius: 2px solid #333;
+    width: 48px;
+    height: 48px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 100;
+    opacity: 0;
+    transition: 0.3s ease;
+} 
+
+.carousel-control:hover {
+    background-color: #fff;
+    color: #333333f5;
+}
+
+.carousel:hover .carousel-control {
+    opacity: 1;
+}
+
+.carousel-control.prev {
+    left: 10px;
+}
+
+.carousel-control.next {
+    right: 10px;
+}
+
+/* Nöqtələr üçün stil */
+.carousel-dots {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    position: absolute;
+    margin-top: -30px;
+    width: 100%;
+    z-index: 10;
+
+}
+
+.dot {
+    height: 10px;
+    width: 10px;
+    margin: 0 5px;
+    background-color: rgba(166, 161, 161, 0.5);
+    border: 1px solid white;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.3s ease;
+}
+
+.dot.active {
+    background-color: #fff;
+}
+
+
+/* bolme  yaradilmasi */
+/* Promo Card (ümumi konteyner) */
+.promo-card {
+    display: flex;
+    justify-content: center;
+    width: 80%;
+    margin-top: 15px;
+    margin-left: 153PX;
+    padding: 20px;
+    background-color: rgba(233, 232, 235, 0.399);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);   
+}
+
+/* Promo itemlər */
+.promo-item {
+    text-align: left;
+    width: 22%;
+    position: relative;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 0 15px;
+}
+
+
+.promo-item:not(:last-child) {
+    border-right: 2px solid #ddd;
+}
+
+.promo-item img {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    border-radius: 20%;
+}
+
+.promo-item h3 {
+    margin: 10px 0;
+    font-size: 18px;
+    color: #333;
+}
+
+
+.six-cards-container {
+    margin-top: 10px;
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+    margin: 152px;
+    height: 280px;
+    margin-top: 30px;
+}
+
+.six-cards-container2 {
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+    margin: 152px;
+    margin-top: -160px;
+}
+
+.rating {
+    height: 40px;
+    width: 40px;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.kechmaz-teklifler {
+    background-color: #6a33cc;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    margin-left: 152px;
+    margin-right: 152px;
+    border-radius: 8px;
+    margin-top: 50px;   
+    height: 80px;
+}
+
+.kechmaz-teklifler h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    
+}
+
+
+    
+
+
+
+
+
+.favorite-icon {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 35px;
+    color: transparent;
+    color: rgba(0, 0, 0, 0.726);
+    height: 45px;
+    width: 45px;
+    background-color: white;
+    border: 1px solid rgb(255, 251, 251);
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+}
+
+.favorite-icon span {
+    display: inline-block;
+    line-height: 1;
+    font-size: 24px;
+    margin-bottom: 80px; import:  !important;
+}
+
+.product-card {
+    width: 250px;
+    border-radius: 8px;
+    padding: 15px;
+    text-align: center;
+    font-family: Arial, sans-serif;
+    position: relative;
+}
+
+.badge {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    color: white;
+    padding: 5px 10px;
+    font-size: 12px;
+    border-radius: 50%;
+    display: inline-block;
+    text-align: center;
+    width: 75px;
+    height: 50px;
+    margin-left: -10px;
+}
+
+.badge2 {
+    position: absolute;
+    top: 73px;
+    left: 9.5px;
+    color: white;
+    padding: 5px 10px;
+    font-size: 12px;
+    border-radius: 50%;
+    display: inline-block;
+    text-align: center;
+    width: 75px;
+    height: 50px;
+    margin-left: -10px;
+}
+
+img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+p {
+    font-size: 17px;
+    margin: 10px 0;
+    color: rgba(0, 0, 0, 0.768);
+}
+
+span {
+    font-size: 13px;
+    margin: 10px 0;
+    color: rgba(0, 0, 0, 0.768);
+}
+
+.price {
+    font-size: 14px;
+    margin: 5px 0;
+    margin-right: 13px;
+}
+
+.price2 h3 span {
+    font-size: 14px;
+    margin: 5px 0;
+    margin-right: 15px;
+}
+
+.old-price {
+    text-decoration: line-through;
+    color: #888;
+}
+
+h3 {
+    font-size: 13px;
+    
+    color: #6a33cc;
+}
+
+.new-price {
+    color: black;
+    font-size: 17.5px;
+    font-weight: bold;
+}
+
+.free-shipping {
+    color: #6a33cc;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.rating {
+    margin: 5px 0;
+    color: rgb(0, 0, 0);
+}
+
+
+
+asasadadadadad
+
+.card {
+    width: 30%;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    flex: 1;
+    min-width: 200px;
+    height: 420px;
+    position: relative;
+}
+
+.card-img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.card-text {
+    padding: 10px;
+    text-align: center;
+}
+
+.card-text h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.card-text p {
+    font-size: 16px;
+    color: #ff3f6c;
+}
+
+.fav-icon {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 24px;
+    color: #ff3f6c;
+    cursor: pointer;
+    z-index: 10;
+
+}
+
+.fav-icon:hover {
+    color: #e6325c;
+}
+
+.card {
+
+    border-radius: 10px;
+    margin-top: 10px;
+    margin: 152px;           
+    width: 1000px;
+    height: 50px;
+    font-family: Arial, sans-serif;
+}
+
+
+.other-options-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}   
+
+.other-options {
+    font-size: 25.7px;
+    color: #333;
+    margin: 10px;
+}
+
+.icon {
+    font-size: 20px;
+    margin-left: 8px;
+}
+
+
+.carousel2 {
+    position: relative;
+    max-width: 80%;
+    margin: auto;
+    overflow: hidden;
+    margin-top: 18px;
+    border-radius: 10px;
+    margin-top: -150px;
+    height: 500px;
+}
+
+.carousel-inner2 {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.carousel-item2 {
+    min-width: 100%;
+    box-sizing: border-box;
+    position: relative;
+}
+
+.coupon2 {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    padding: 5px 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.carousel-item2 img {
+    width: 100%;
+    display: block;
+    height: auto;
+    object-fit: cover;
+}
+
+.carousel-control2 {
+    background-color: #fff;
+    position: absolute;
+    font-size: 17px;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #fff;
+    color: #333333;
+    border-radius: 50%;
+    border-radius: 2px solid #333;
+    width: 48px;
+    height: 48px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border: none;
+    padding: 10px;
+    z-index: 100;
+} 
+
+.carousel-control:hover2 {
+    background-color: #fff;
+    color: #333333f5;
+}
+
+.carousel2:hover .carousel-control2 {
+    opacity: 1;
+}
+
+.carousel-control.prev2 {
+    left: 10px;
+}
+
+.carousel-control.next2 {
+    right: 10px;
+}
+
+/* Nöqtələr üçün stil */
+.carousel-dots2 {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    position: absolute;
+    margin-top: -30px;
+    width: 100%;
+    z-index: 10;
+
+}
+
+
+.carousel2 {
+    position: relative;
+    max-width: 1180px;
+    margin: auto;
+    margin-top: -250px;
+}
+
+.carousel-item2 {
+    position: relative;
+}
+
+.carousel-item2 img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.three-cards-container {
+    margin-top: 30px;
+    display: flex;
+    justify-content: flex-end;
+    padding: 20px;
+    margin-top: -510px;
+    height: auto;
+}
+
+.plus-card {
+    width: 200px;
+    border-radius: 8px;
+    text-align: center;
+    font-family: Arial, sans-serif;
+    position: relative;
+    background: #fff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transform: scale(0.8);
+    transform-origin: center;
+}
+
+.badgee {
+    position: absolute;
+    top: -3px;
+    left: 10px;
+    color: white;
+    padding: 5px 10px;
+    font-size: 10px;
+    border-radius: 50%;
+    display: inline-block;
+    text-align: center;
+    width: 75px;
+    height: 50px;
+    margin-left: -10px;
+}
+
+.badgee2 {
+    position: absolute;
+    top: 55px;
+    left: -2px;
+    color: white;
+    padding: 5px 10px;
+    font-size: 12px;
+    border-radius: 50%;
+    display: inline-block;
+    text-align: center;
+    width: 75px;
+    height: 50px;
+    margin-left: -10px;
+}
+
+img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+p {
+    font-size: 15px;
+    margin: 10px 0;
+    color: rgba(0, 0, 0, 0.768);
+}
+
+h5 {
+    font-size: 13px;
+    margin: 10px 0;
+    color: rgba(0, 0, 0, 0.768);
+}
+
+.pricedi {
+    font-size: 14px;
+    margin: 5px 0;
+}
+
+.old-pricedi {
+    text-decoration: line-through;
+    color: #888;
+}
+
+h5 {
+    font-size: 13px;
+    color: #6a33cc;
+}
+
+.new-pricedi {
+    color: black;
+    font-size: 17.5px;
+    font-weight: bold;
+}
+
+.logo-carousel {
+    display: flex; 
+    justify-content: center; 
+    gap: 20px; 
+    margin-top: -42px;
+    margin-left: 540px;
+}
+
+.logo-item {
+    width: 95px;
+    height: 95px;
+    border-radius:
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+}
+
+.logo-item img {
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+}
+
+
+/* sonuncu */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.Final-mission {
+    background-color: #e1e1e1;
+    color: white;
+    padding: 20px;
+    margin: 50px auto;
+    width: 100%;
+}
+
+.Final-mission h2 {
+    color: rgba(0, 0, 0, 0.83);
+    font-size: 24px;
+    margin-bottom: 20px;
+    margin-left: 150px;
+}
+
+/* Logoların konteyneri */
+.logocorusel {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: nowrap;
+}
+
+.logo-item2 {
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+}
+
+.logo-item img {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
